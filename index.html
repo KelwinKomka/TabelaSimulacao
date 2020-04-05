@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Simulação</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+    <div class="divMain">
+
+      <div style="margin-top: 20px;">
+        <label>Tempo da simulação (minutos):</label>
+        <input id="ipMinutos" type="number" class="inputText" tabindex="1">
+        <br/>
+        <button id="btnSimular" class="btn" type="submit" onclick="simular()" tabindex="0">Simular</button>
+        <div id="divErro"></div>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label>Tempo entre chagadas: </label>
+        <input id="ipTEC" class="inputText" tabindex="2">
+        <br/>
+        <span style="font-size: small;">coloque os valores separados por ponto e vírgula (;)</span>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label>Tempo de serviço: </label>
+        <input id="ipTS" class="inputText" tabindex="3">
+        <br/>
+        <span style="font-size: small;">coloque os valores separados por ponto e vírgula (;)</span>
+      </div>
+
+    </div>
+
+    <div class="divMain" style="text-align: center;">
+      <span id="spanResultado"></span>
+    </div>
+
+    <div class="divMain" style="text-align: center;">
+
+      <table id="tbSimulacao" class="tg">
+        <th>Cliente</th>
+        <th>Tempo desde a última chegada (minutos)</th>
+        <th>Tempo de chegada no relógio</th>
+        <th>Tempo de serviço (minutos)</th>
+        <th>Tempo de início do serviço no relógio</th>
+        <th>Tempo do cliente na fila (minutos)</th>
+        <th>Tempo final do serviço no relógio</th>
+        <th>Tempo do cliente no sistema (minutos)</th>
+        <th>Tempo livre do operador (minutos)</th>
+      </table>
+    </div>
+
+  </body>
+</html>
